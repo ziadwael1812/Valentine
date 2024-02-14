@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        h1 {
+            color: #ff1493;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Will You Be My Valentine?</h1>
+    <button id="yesButton">Yes</button>
+    <button id="noButton">No</button>
+
+    <script>
+        const yesButton = document.getElementById('yesButton');
+        const noButton = document.getElementById('noButton');
+        
+        yesButton.addEventListener('click', () => {
+            alert('Thank you for saying Yes! 💕');
+        });
+        
+        noButton.addEventListener('click', () => {
+            const responses = [
+                "Say Yes! 😊",
+                "Come on, say Yes! 🥰",
+                "Don't be shy, say Yes! ❤️",
+                "Please say Yes! 🌹",
+                "Just one Yes, please! 💖",
+                "Say Yes and make my day! 😍"
+            ];
+            const randomIndex = Math.floor(Math.random() * responses.length);
+            noButton.innerText = responses[randomIndex];
+        });
+    </script>
+</body>
+</html>
